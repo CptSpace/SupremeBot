@@ -8,8 +8,8 @@ public class BotListener extends ListenerAdapter{
 	@Override 																//@Override Überschreibt die vorhergehende Methode onMessageReceived der API
 	public void onMessageReceived(MessageReceivedEvent e){ 					//Feuert ein Event wenn eine Nachricht empfangen wird und speichert Informationen in e 
 		//Funktionen werden in der Doc erläutert
-		if(e.getMessage().getRawContent().equalsIgnoreCase("spam") && spamprotection == false){
-			e.getChannel().sendMessage("spam").queue();
+		if(e.getMessage().getRawContent().equalsIgnoreCase("nein") && spamprotection == false){
+			e.getChannel().sendMessage("doch").queue();
 		}
 		if(e.getMessage().getRawContent().equalsIgnoreCase("ähh Bob")){
 			spamprotection = true;
